@@ -20,18 +20,19 @@ public class DepartmentController {
 
     @PostMapping("/")
     public ResponseEntity<?> save(@RequestBody Department department) {
-        log.info("inside save department method of department controller");
+        log.info("Department Controller: save");
         return ResponseEntity.ok().body(departmentService.save(department));
     }
 
     @GetMapping("/")
     public ResponseEntity<?> getAll() {
+        log.info("Department Controller: get all");
         return ResponseEntity.ok().body(departmentService.getAll());
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getById(@PathVariable("id") Long id) {
-        log.info("inside getById department method of department controller");
+        log.info("Department Controller: get by id");
         return ResponseEntity.ok().body(departmentService.getById(id));
     }
 }

@@ -28,7 +28,7 @@ spring:
 
 hystrix:
   command:
-    fallbackcmd:
+    default:
       execution:
         isolation:
           thread:
